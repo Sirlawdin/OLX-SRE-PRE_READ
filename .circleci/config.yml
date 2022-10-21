@@ -11,13 +11,14 @@ jobs:
     steps:
       - run: 
           name: print hello 
-          command: echo "hello" $NAME 
+          command: |
+              echo "hello" $NAME  
 
   print_world:
     docker: 
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "welcome to a new world"
+      - run: echo "welcome to a new world" $L_NAME
 
   
 
