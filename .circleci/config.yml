@@ -10,15 +10,15 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: 
-          name: print hello 
+          name: "print hello"
           command: |
-              echo "hello" $NAME  
+              echo "hello" ${NAME}  
 
   print_world:
     docker: 
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "welcome to a new world" $L_NAME
+      - run: echo "welcome to a new world" ${L_NAME}
 
   
 
